@@ -57,9 +57,8 @@ public class Persona {
 	
 	// Comprobar si es mayor de edad
 	public void more18() {
-		LocalDate now = LocalDate.now();
 		int age = this.getYB();
-		if (now.getYear() - age > 17) {
+		if (LocalDate.now().getYear() - age > 17) {
 			System.out.println("Es mayor de edad");
 		}
 		else {
