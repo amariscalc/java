@@ -1,3 +1,7 @@
+package persona;
+
+import java.time.LocalDate;
+
 public class Persona {
 	
 	// Definición de los atributos de la clase Persona
@@ -30,6 +34,8 @@ public class Persona {
 		this.surname = sn;
 		this.yearBirth = yB;
 	}
+	
+	// Comprobar si es mayor de edad
 
 	// Métodos set y get. Dan la posibilidad de modificar y obtener datos del objeto creado. En este caos una persona.
 	
@@ -49,4 +55,15 @@ public class Persona {
 		this.yearBirth = yB;
 	}
 	
+	// Comprobar si es mayor de edad
+	public void more18() {
+		LocalDate now = LocalDate.now();
+		int age = this.getYB();
+		if (now.getYear() - age > 17) {
+			System.out.println("Es mayor de edad");
+		}
+		else {
+			System.out.println("Es menor de edad");
+		}	
+	}	
 }
